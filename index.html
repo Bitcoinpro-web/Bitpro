@@ -829,7 +829,7 @@
                     <input type="text" id="nairaAmount" placeholder="Naira equivalent" readonly>
                 </div>
                 
-                <p>Current exchange rate: $1 = ₦1500</p>
+                <p>Current exchange rate: $1 = ₦1489.52</p>
             </div>
             
             <div class="modal-actions">
@@ -1032,7 +1032,7 @@
                 return;
             }
             
-            const newUser = { name, email, password, balance: 100.00 };
+            const newUser = { name, email, password, balance: 200.00 };
             users.push(newUser);
             localStorage.setItem('bitcoinUsers', JSON.stringify(users));
             
@@ -1142,7 +1142,7 @@
         // BTC to Naira conversion
         btcAmountInput.addEventListener('input', () => {
             const amount = parseFloat(btcAmountInput.value) || 0;
-            const nairaAmount = amount * 1500;
+            const nairaAmount = amount * 1489.52;
             nairaAmountInput.value = `₦${nairaAmount.toLocaleString()}`;
         });
 
